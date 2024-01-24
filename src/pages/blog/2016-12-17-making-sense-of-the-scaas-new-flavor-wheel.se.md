@@ -1,8 +1,9 @@
 ---
 templateKey: blog-post
-title: Making sense of the SCAA’s new Flavor Wheel - på svenska
-description: "The Coffee Taster’s Flavor Wheel, the official resource used by
-  coffee tasters, has been revised for the first time this year. "
+title: Making sense of the SCAA’s new Flavor Wheel - PÅ SVENSKA
+description: "PÅ SVENSKA: The Coffee Taster’s Flavor Wheel, the official
+  resource used by coffee tasters, has been revised for the first time this
+  year. "
 tags:
   - flavor
   - tasting
