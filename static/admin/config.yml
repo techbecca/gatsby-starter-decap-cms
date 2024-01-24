@@ -13,11 +13,26 @@ media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
 
+i18n:
+  # Required and can be one of multiple_folders, multiple_files or single_file
+  # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
+  # multiple_files - persists files in `<folder>/<slug>.<locale>.<extension>`
+  # single_file - persists a single file in `<folder>/<slug>.<extension>`
+  structure: multiple_files
+
+  # Required - a list of locales to show in the editor UI
+  locales: [en, se]
+
+  # Optional, defaults to the first item in locales.
+  # The locale to be used for fields validation and as a baseline for the entry.
+  default_locale: en
+
 collections:
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
     create: true
+    i18n: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
@@ -25,14 +40,37 @@ collections:
           name: "templateKey",
           widget: "hidden",
           default: "blog-post",
+          i18n: true,
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          i18n: duplicate,
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          i18n: true,
+        }
+      - {
+          label: "Featured Post",
+          name: "featuredpost",
+          widget: "boolean",
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          label: "Featured Image",
+          name: "featuredimage",
+          widget: image,
+          required: false,
+          i18n: duplicate,
+        }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+      - { label: "Tags", name: "tags", widget: "list", i18n: duplicate }
 
   - name: "pages"
     label: "Pages"
