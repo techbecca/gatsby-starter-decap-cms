@@ -11,7 +11,6 @@ backend:
 local_backend: true
 media_folder: static/img
 public_folder: /img
-publish_mode: editorial_workflow
 
 i18n:
   # Required and can be one of multiple_folders, multiple_files or single_file
@@ -26,6 +25,8 @@ i18n:
   # Optional, defaults to the first item in locales.
   # The locale to be used for fields validation and as a baseline for the entry.
   default_locale: en
+
+publish_mode: editorial_workflow
 
 collections:
   - name: "blog"
@@ -70,7 +71,7 @@ collections:
           i18n: duplicate,
         }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
-      - { label: "Tags", name: "tags", widget: "list", i18n: duplicate }
+      - { label: "Tags", name: "tags", widget: "list", i18n: true }
 
   - name: "pages"
     label: "Pages"
