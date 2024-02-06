@@ -42,7 +42,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "manual-item",
+          default: "manual-page",
           i18n: true,
         }
       - { label: "Title", name: "title", widget: "string", i18n: true }
