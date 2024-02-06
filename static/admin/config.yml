@@ -33,9 +33,9 @@ collections:
     folder: "src/pages/manual"
     create: true
     i18n: true
-    slug: "{{slug}}"
+    slug: "{{title}}-{{slug}}"
     nested:
-      depth: 4
+      depth: 2
       summary: "{{title}}"
     fields:
       - {
