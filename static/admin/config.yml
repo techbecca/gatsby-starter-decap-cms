@@ -60,7 +60,7 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
       - { label: "Tags", name: "tags", widget: "list", i18n: true }
-    meta: { path: { widget: string, label: "Path", index_file: "{{title}}" } }
+    meta: { path: { widget: string, label: "Path", index_file: "index" } }
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
